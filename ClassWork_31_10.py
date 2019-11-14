@@ -68,5 +68,43 @@ for element in created_list:
     for item in element:
         print(item, end="%")
     print()
+
+# 8.  Юзер вводить число з клавіатури, написати скріпт, який визначає чи це число 
+# просте чи складне.
+
+n = int(input("Enter number: "))
+is_prime = True
+for element in range(2, n):
+    if n % element == 0:    
+        is_prime = False
+        break
+if is_prime == True:
+    print("This number is prime")
+else:
+    print("This number is composite")
     
+# 9.  Знайти максимальну цифру дійсного числа. Дійсне число генеруємо випадковим чином 
+# за допомогою методу random() з модуля random
+# (для цього підключаємо модуль random наступним чином from random import random)
+
+import random
+real_num = random.uniform(0.0, 100.0)
+real_num_str_list = str(real_num).replace('.','')
+real_num_str_list = real_num_str_list[::1]
+print("Random real number is:", real_num)
+print("Real number converted to string:", real_num_str_list)
+max_val = 0
+for element in real_num_str_list:
+    if int(element) > max_val:
+        max_val = int(element)
+print("Max digit of randomed real number is:",max_val)
+
+# 10.  Визначити чи введене слово паліндром, тобто чи воно читається однаково 
+# зліва направо і навпаки.
+
+word = input("Please, enter any word: ")
+if (word==word[::-1]):
+    print("Word is palindrome.")
+else:
+    print("Word is not palindrome.")     
     
