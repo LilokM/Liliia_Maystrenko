@@ -1,19 +1,19 @@
 # 1.  Створити список цілих чисел, які вводяться з терміналу 
 # та визначити серед них максимальне та мінімальне число.
 
-# count_user_list = input("Input amount of list values: ")
-# user_list = []
-# for element in range(int(count_user_list)):
-#    user_list.append(int(input("Next number: ")))
-# print(user_list)
-# print("Maximum number is ", max(user_list))
-# print("Minimum number is ", min(user_list))
+count_user_list = input("Input amount of list values: ")
+user_list = []
+for element in range(int(count_user_list)):
+   user_list.append(int(input("Next number: ")))
+print(user_list)
+print("Maximum number is ", max(user_list))
+print("Minimum number is ", min(user_list))
 
-# count_user_list = input("Input amount of list values: ")
-# user_list = [input("Next namber: ") for values in (range(int(count_user_list)))]
-# print(user_list)
-# print("Maximum number is ", max(user_list))
-# print("Minimum number is ", min(user_list))
+count_user_list = input("Input amount of list values: ")
+user_list = [input("Next namber: ") for values in (range(int(count_user_list)))]
+print(user_list)
+print("Maximum number is ", max(user_list))
+print("Minimum number is ", min(user_list))
 
 # 2.  В інтервалі від 1 до 10 визначити числа 
 # •  парні, які діляться на 2,
@@ -95,5 +95,5 @@ for element in range(10, 30):
 sentence = str(input("Please, input any sentence: "))
 sentence = sentence.split(" ")
 for word in sentence:
-    sentence.sort()
+    sentence.sort() and ''.join(sentence)
     print(word)
